@@ -14,4 +14,7 @@ order: 2
 자료관리 – ‘마약류통합관리시스템 프로그램 실행’
 
 ![]({{site.url}}/images/docs/doc_1/post_1-2.png)  
+이미지1
+![]({{site.url}}/images/docs/doc_1/이미지.png)  
+이미지2
 ※ 해당 메뉴는 CM설정이 되어있어야 메뉴에 노출됩니다.
