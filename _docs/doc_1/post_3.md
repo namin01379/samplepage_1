@@ -16,4 +16,4 @@ order: 3
 3.  요양기관에서 취급하는 마약류에 대한 재고현황을 조회 할 수 있습니다.  
 
 [![]({{site.url}}/images/docs/doc_1/post_3-1.png)]({{site.url}}/images/docs/doc_1/post_3-1.png)    
-[ 마약류통합관리시스템 전체 화면 ]
+*[ 마약류통합관리시스템 전체 화면 ]*  
