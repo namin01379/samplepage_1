@@ -6,8 +6,6 @@ order: 1
 ### CM설정
 
 코드마스터(C:/NixSQL/CM.exe)를 실행하여 마약류통합관리시스템 사용을 ‘YES’로 변경 한다.  
-        편집
-[![ㅁㄴㄴ]({{site.url}}/images/docs/doc_1/이미지.png)]({{site.url}}/images/docs/doc_1/이미지.png)  
 [![]({{site.url}}/images/docs/doc_1/post_1-1.png)]({{site.url}}/images/docs/doc_1/post_1-1.png)  
 
 ### 마약류통합관리시스템 프로그램 위치
