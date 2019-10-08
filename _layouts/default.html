@@ -48,15 +48,24 @@
 				<ul>
 					{% assign grouped = site.docs | group_by: 'category' %}
 					{% for group in grouped %}
+						{% assign items = group.items | sort: 'order' %}
+						{% for item in items %}		
+						{% if item.top_level %}
 						<li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
-							{% assign items = group.items | sort: 'order' %}
-							<a href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</a>
+							<a href="{{ site.baseurl }}{{ item.url }}">{{ group.name }}</a>
+							{% if page.category == item.category %}
+							{% assign children = group.items | sort: 'order' %}
+							{% for child in children %}
+							{% if child.top_level != true %}
 							<ul>
-								{% for item in items %}
-									<li class="nav-item {% if item.url == page.url %}current{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
-								{% endfor %}
+									<li class="nav-item {% if child.url == page.url %}current{% endif %}"><a href="{{ site.baseurl }}{{ child.url }}">{{ child.title }}</a></li>
 							</ul>
+							{% endif %}
+							{% endfor %}
+							{% endif %}
 						</li>
+						{% endif %}
+						{% endfor %}
 					{% endfor %}
 				</ul>
 
@@ -76,6 +85,22 @@
 			</div>
 			<article class="content">
 				{{ content }}
+
+				{% if page.top_level == true and page.has_toc != false %}
+				<hr>
+				<h2 class="text-delta">목차</h2> 
+				{% assign children = site.docs | sort:"order" %}
+				<ul>	
+				  {% for child in children %}
+				  {% if child.category == page.category and child.top_level != true %}
+					<li>
+					  <a href="{{ site.baseurl }}{{ child.url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
+					</li>
+					{% endif %}
+				  {% endfor %}
+				</ul>
+			  {% endif %}
+
 			</article>
 		</section>
 
