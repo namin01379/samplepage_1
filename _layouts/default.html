@@ -47,7 +47,9 @@
 
 				<ul>
 					{% assign grouped = site.docs | group_by: 'category' %}
-					{% for group in grouped %}
+					{% assign topPages = site.docs | where: 'top_level', 'true' | sort: 'nav_order' %}
+					{% for top in topPages %}
+						{% assign group = grouped | where: 'name', top.category | first %}
 						{% assign items = group.items | sort: 'order' %}
 						{% for item in items %}		
 						{% if item.top_level %}
