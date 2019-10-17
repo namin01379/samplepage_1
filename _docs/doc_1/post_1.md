@@ -15,3 +15,4 @@ order: 1
 
 [![]({{site.url}}/images/docs/doc_1/post_1-2.png)]({{site.url}}/images/docs/doc_1/post_1-2.png)  
 > 해당 메뉴는 CM설정이 되어있어야 메뉴에 노출됩니다.
+ㅁㅇㅁㄴ
