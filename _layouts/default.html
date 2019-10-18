@@ -33,7 +33,7 @@
 			</h1>
 
 			<form action="{{ site.baseurl }}/search/" method="get">
-				<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+				<input type="text" name="q" id="search-input" placeholder="검색" autofocus>
 				<input type="submit" value="Search" style="display: none;">
 			</form>
 
@@ -46,55 +46,66 @@
 				</ul>
 
 				<ul>
-					{% assign grouped = site.docs | group_by: 'category' %}
-					{% assign topPages = site.docs | where: 'top_level', 'true' | sort: 'nav_order' %}
+					{% assign topPages = site.docs | where: 'isMain', 'true' | sort: 'mainOrder' %}
 					{% for top in topPages %}
-						{% assign group = grouped | where: 'name', top.category | first %}
-						{% assign items = group.items | sort: 'order' %}
-						{% for item in items %}		
-						{% if item.top_level %}
-						<li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
-							<a href="{{ site.baseurl }}{{ item.url }}">{{ group.name }}</a>
-							{% if page.category == item.category %}
-							{% assign children = group.items | sort: 'order' %}
-							{% for child in children %}
-							{% if child.top_level != true %}
+					{% if page.mainCategory != top.mainCategory %}
+					<li class="nav-item top-level "><a href="{{ site.baseurl }}{{ top.url }}">{{ top.mainCategory }}</a>
+					</li>
+					{% else %}
+					<li class="nav-item top-level current">
+							<a href="{{ site.baseurl }}{{ top.url }}">{{ top.mainCategory }}</a>
+
+							{% assign grouped = site.docs | where: 'mainCategory', page.mainCategory | group_by: 'subCategory'%}
+							{% for group in grouped %}
+							{% if group.name != "" %}
 							<ul>
-									<li class="nav-item {% if child.url == page.url %}current{% endif %}"><a href="{{ site.baseurl }}{{ child.url }}">{{ child.title }}</a></li>
-							</ul>
-							{% endif %}
+							{% assign items = group.items | sort: 'pageOrder' %}
+								{% assign first = items[0] %}
+								{% if page.subCategory != group.name %}
+									<li class="nav-item "><a href="{{ site.baseurl }}{{ first.url }}">{{first.subCategory}}</a></li>
+								{% else %}
+									<li class="nav-item current"><a href="{{ site.baseurl }}{{ first.url }}">{{first.subCategory}}</a></li>
+									<ul>
+									{% for item in items %}
+										<li class="nav-item page {% if item == page %}current{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{item.title}}</a></li>
+									{% endfor %}
+									</ul>
+								{% endif %}
+							</ul>		
+							{% endif %}					
 							{% endfor %}
-							{% endif %}
-						</li>
-						{% endif %}
-						{% endfor %}
-					{% endfor %}
+					</li>
+					{% endif %}
+					{% endfor %}					
 				</ul>
 
 				<ul>
+
+				</ul>
+				<!-- <ul>
 					<li class="nav-item top-level {% if page.url == '/changelog/' %}current{% endif %}">
 						{% assign changelog = site.html_pages | where: 'url', '/changelog/' | first %}
 						<a href="{{ site.baseurl }}/changelog/">{{ changelog.title }}</a>
 					</li>
-				</ul>
+				</ul> -->
 			</nav>
 		</header>
 
 		<section class="main">
 			<div class="page-header">
-				<h2>{% if page.category %}{{ page.category }}{% else %}{{ site.title }}{% endif %}</h2>
+				<h2>{% if page.mainCategory %}{{ page.mainCategory }}{% else %}{{ site.title }}{% endif %}</h2>
 				<h3>{{ page.title }}</h3>
 			</div>
 			<article class="content">
 				{{ content }}
 
-				{% if page.top_level == true and page.has_toc != false %}
+				{% if page.isMain == true and page.has_toc != false %}
 				<hr>
 				<h2 class="text-delta">목차</h2> 
 				{% assign children = site.docs | sort:"order" %}
 				<ul>	
 				  {% for child in children %}
-				  {% if child.category == page.category and child.top_level != true %}
+				  {% if child.mainCategory == page.mainCategory and child.isMain != true %}
 					<li>
 					  <a href="{{ site.baseurl }}{{ child.url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
 					</li>

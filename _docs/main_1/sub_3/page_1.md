@@ -1,7 +1,8 @@
 ---
 title: 환경설정
-category: 마약류통합관리시스템
-order: 4
+mainCategory: main_1
+subCategory: sub_3
+pageOrder: 1
 ---
 
 ### 보고자 정보

@@ -1,7 +1,8 @@
 ---
 title: 표
-category: 마크다운예시
-order: 5
+mainCategory: main_2
+subCategory: sub_2
+pageOrder: 2
 ---
 
 표

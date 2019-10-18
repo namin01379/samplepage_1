@@ -1,7 +1,8 @@
 ---
 title: 마약류 등록
-category: 마약류통합관리시스템
-order: 5
+mainCategory: main_1
+subCategory: sub_3
+pageOrder: 2
 ---
 
 ### 요양기관에서 사용하는 마약류 등록

@@ -1,7 +1,8 @@
 ---
 title: 재고조회
-category: 마약류통합관리시스템
-order: 9
+mainCategory: main_1
+subCategory: sub_3
+pageOrder: 6
 ---
 
 ### 마약류의 재고조회 

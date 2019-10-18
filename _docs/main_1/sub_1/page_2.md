@@ -1,7 +1,8 @@
 ---
 title: 마약류통합관리시스템
-category: 마약류통합관리시스템
-order: 3
+mainCategory: main_1
+subCategory: sub_1
+pageOrder: 2
 ---
 
 ### 마약류통합관리시스템 소개  

@@ -1,7 +1,8 @@
 ---
 title: 제품별 재고현황
-category: 마약류통합관리시스템
-order: 10
+mainCategory: main_1
+subCategory: sub_3
+pageOrder: 7
 ---
 
 ### 마약류의 제품별 재고현황  

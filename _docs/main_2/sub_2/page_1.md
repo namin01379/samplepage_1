@@ -1,7 +1,8 @@
 ---
 title: 제목(h태그)
-category: 마크다운예시
-order: 1
+mainCategory: main_2
+subCategory: sub_2
+pageOrder: 1
 ---
 
 # h1

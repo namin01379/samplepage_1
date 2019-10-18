@@ -1,7 +1,8 @@
 ---
 title: 구입전송 기록조회
-category: 마약류통합관리시스템
-order: 8
+mainCategory: main_1
+subCategory: sub_3
+pageOrder: 5
 ---
 
 ### 마약류의 구입전송기록 조회  

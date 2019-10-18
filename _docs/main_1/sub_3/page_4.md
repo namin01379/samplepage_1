@@ -1,7 +1,8 @@
 ---
 title: 조제/투약
-category: 마약류통합관리시스템
-order: 7
+mainCategory: main_1
+subCategory: sub_3
+pageOrder: 4
 ---
 ### 신규보고 작성 및 전송방법
 

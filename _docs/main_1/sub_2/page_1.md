@@ -1,7 +1,8 @@
 ---
 title: 차트 사용
-category: 마약류통합관리시스템
-order: 2
+mainCategory: main_1
+subCategory: sub_2
+pageOrder: 1
 ---
 
 ### 마약분류 확인  

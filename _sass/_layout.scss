@@ -97,7 +97,7 @@ header {
 		padding: $emblem-vertical-padding $emblem-horizontal-padding;
 		height: $nav-header-height;
 		box-sizing: border-box;
-		background-color: $brand-colour;
+		background-color: $brand-color;
 		color: #fff;
 		margin: 0;
 		font-size: 1.7rem;
@@ -246,7 +246,12 @@ nav > ul {
 		color: #666;
 		text-decoration: none;
 		font-size: 1.4rem;
-		padding: $space / 2 0 $space / 2 $space * 2;
+		line-height: 1.5;
+		padding-left: $space / 2;
+		margin-top : $space / 2;
+		margin-left: $space * 2;
+		margin-right: 0;
+		margin-bottom: $space /2;
 		display: block;
 	}
 
@@ -254,12 +259,22 @@ nav > ul {
 	> a:active,
 	> a:hover {
 		color: #111;
+		border-left: 4px solid transparent;
+		border-left-color: $brand-color;
 	}
 
 	&.top-level > a {
-		line-height: 1.5;
+		line-height: 2.5;
 		font-weight: 600;
-		padding-left: $space;
+		padding-top: 0;
+		padding-left: $space / 2;
+		padding-right: 0;
+		padding-bottom: 0;
+		margin: 0 0 0 0;
+	}
+
+	&.page > a{
+		margin-left: $space * 4;
 	}
 }
 
@@ -337,7 +352,7 @@ h4 svg {
 	position: absolute;
 	top: 5px;
 	line-height: 1;
-	color: $brand-colour;
+	color: $brand-color;
 	padding-left: 5px;
 }
 
@@ -377,7 +392,7 @@ h4 svg {
 
 	&:focus {
 		outline: none;
-		border-left-color: $brand-colour;
+		border-left-color: $brand-color;
 	}
 }
 
@@ -405,7 +420,7 @@ h4 svg {
 	font-weight: bold;
 
 	&.major {
-		background: $brand-colour;
+		background: $brand-color;
 		color: #fff;
 	}
 }
@@ -415,8 +430,8 @@ blockquote {
 	padding: 10px 15px;
 	margin-left: -15px;
 	margin-right: -10px;
-	background-color: $brand-colour-light;
-	border-color: $brand-colour;
+	background-color: $brand-color-light;
+	border-color: $brand-color;
 
 	p:last-child {
 		margin-bottom: 0;

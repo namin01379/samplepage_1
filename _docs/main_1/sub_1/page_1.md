@@ -1,7 +1,8 @@
 ---
 title: 사용 전 설정안내
-category: 마약류통합관리시스템
-order: 1
+mainCategory: main_1
+subCategory: sub_1
+pageOrder: 1
 ---
 
 ### CM설정

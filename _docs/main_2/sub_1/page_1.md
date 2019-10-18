@@ -1,7 +1,8 @@
 ---
 title: 이미지
-category: 마크다운예시
-order: 3
+mainCategory: main_2
+subCategory: sub_1
+pageOrder: 1
 ---
 
 ![]({{site.url}}/images/sample.png){: width="200" height="150"}

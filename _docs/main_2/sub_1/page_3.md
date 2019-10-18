@@ -1,7 +1,8 @@
 ---
 title: 줄바꿈
-category: 마크다운예시
-order: 2
+mainCategory: main_2
+subCategory: sub_1
+pageOrder: 3
 ---
 
 마크다운에서 Enter를 1번만 입력하면

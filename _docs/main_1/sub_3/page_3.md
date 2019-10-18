@@ -1,7 +1,8 @@
 ---
 title: 구입
-category: 마약류통합관리시스템
-order: 6
+mainCategory: main_1
+subCategory: sub_3
+pageOrder: 3
 ---
 
 ### 마약류의 구입내역 관리

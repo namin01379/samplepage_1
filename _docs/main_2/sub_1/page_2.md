@@ -1,7 +1,8 @@
 ---
 title: blockquote
-category: 마크다운예시
-order: 4
+mainCategory: main_2
+subCategory: sub_1
+pageOrder: 2
 ---
 
 >blockqoute !!
