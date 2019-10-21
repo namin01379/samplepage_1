@@ -1,7 +1,7 @@
 ---
-title: 사용 전 설정안내
-mainCategory: main_1
-subCategory: sub_1
+title: 신규보고
+mainCategory: 조제투약
+subCategory: 보고작성 및 주의사항 개요
 pageOrder: 1
 ---
 

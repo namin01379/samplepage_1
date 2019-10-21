@@ -258,9 +258,7 @@ nav > ul {
 	&.current > a,
 	> a:active,
 	> a:hover {
-		color: #111;
-		border-left: 4px solid transparent;
-		border-left-color: $brand-color;
+		color: $brand-color;
 	}
 
 	&.top-level > a {

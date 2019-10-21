@@ -1,6 +1,8 @@
 ---
-title: 마크다운예시
-mainCategory: main_2
-isMain: true
+title: 구입
 mainOrder: 2
 ---
+
+
+
+

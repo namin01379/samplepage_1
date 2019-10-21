@@ -1,8 +1,8 @@
 ---
-title: 마약류통합관리시스템
-mainCategory: main_1
-subCategory: sub_1
-pageOrder: 2
+title: 취소보고
+mainCategory: 구입
+subCategory: 신규 변경 취소 보고
+pageOrder: 1
 ---
 
 ### 마약류통합관리시스템 소개  

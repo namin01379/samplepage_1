@@ -1,7 +1,5 @@
 ---
-title: 주요내용
-mainCategory: main_1
-isMain: true
+title: 조제투약
 mainOrder: 1
 ---
 
