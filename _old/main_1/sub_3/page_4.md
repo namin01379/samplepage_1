@@ -73,5 +73,4 @@ pageOrder: 4
 <p><a href="http://localhost:4000/images/link.png">
 <img src="http://localhost:4000/images/sample.png" alt="" width="400" height="300" /></a></p>
 
-<p><img src="http://localhost:4000/images/  .png" alt="대체텍스트" /></p>
 

@@ -100,25 +100,33 @@
 				{{ content }}
 
 				{% if page.subCategory == nil %}
-				<hr>
-					<h2 class="text-delta">목차</h2> 
-					<ul>	
 					{% if page.mainCategory == nil %}
 					{% assign children = site.docs | where_exp: "item", "item.mainCategory == page.title" | where_exp: "item", "item.subCategory == nil" | sort:"subOrder" %}
-					  {% for child in children %}
-						<li>
-						  <a href="{{ site.baseurl }}{{ child.url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
-						</li>
-					  {% endfor %}
+						{% if children.size > 0 %}
+						<hr>
+						<h2 class="text-delta">목차</h2>
+						<ul>
+							{% for child in children %}
+							<li>
+								<a href="{{ site.baseurl }}{{ child.url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
+							</li>
+							{% endfor %}			
+						</ul>
+						{% endif %}
 					{% else %}
 					{% assign children = site.docs | where_exp: "item", "item.mainCategory == page.mainCategory" | where_exp: "item", "item.subCategory == page.title" | sort:"pageOrder" %}
-					{% for child in children %}
-					  <li>
-						<a href="{{ site.baseurl }}{{ child.url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
-					  </li>
-					{% endfor %}
+						{% if children.size > 0 %}
+						<hr>
+						<h2 class="text-delta">목차</h2>
+						<ul>
+							{% for child in children %}
+							<li>
+								<a href="{{ site.baseurl }}{{ child.url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
+							</li>
+							{% endfor %}
+						</ul>
+						{% endif %}
 					{% endif %}
-				</ul>
 				{% endif %}
 			</article>
 		</section>
